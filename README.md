@@ -1,0 +1,22 @@
+# Master Dictator
+
+**Dictate. Don't be dictated to.**
+
+Master Dictator is a privacy-first Android keyboard with offline speech recognition in many languages. Your words are transcribed on your phone and never leave it.
+
+This repository does two things:
+
+- **Issue tracker** for the app. Bugs and feature requests go to [Issues](https://github.com/llehn/MasterDictator/issues).
+- **Website** served via GitHub Pages from the root of this repository (`index.html`, `assets/`).
+
+The app's source code is not hosted here.
+
+## Website
+
+Static HTML and CSS, no build step. All artwork is inline SVG. Fonts are loaded from Google Fonts.
+
+To publish: repository *Settings → Pages → Build and deployment → Source: Deploy from a branch*, then pick the branch and the `/ (root)` folder.
+
+## Status
+
+Coming soon to Google Play.
