@@ -24,10 +24,10 @@ body{
   font-family:var(--body);font-size:17px;line-height:1.6;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
-  opacity:.7;mix-blend-mode:overlay;
+/* Grain is painted straight into the body background: no fixed layer and no
+   blend mode, so scrolling never re-composites the whole viewport. */
+body{
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .035 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
 }
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--cream)}
@@ -48,7 +48,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 /* NAV */
 .nav{
   position:sticky;top:0;z-index:50;
-  background:rgba(16,14,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:#131110;
   border-bottom:1px solid rgba(241,231,211,.08);
 }
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
@@ -95,13 +95,10 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 .hero-note{margin:26px 0 0;font-size:14px;color:var(--muted)}
 .hero-note b{color:var(--gold);font-weight:700}
 
-.poster{
-  position:relative;transform:rotate(-1.5deg);
-  filter:drop-shadow(0 30px 40px rgba(0,0,0,.55));
-}
+.poster{position:relative;transform:rotate(-1.5deg)}
 .poster-frame{
   background:var(--paper);padding:14px;border:2px solid var(--gold-2);
-  box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 8px var(--red);
+  box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 8px var(--red),0 30px 40px rgba(0,0,0,.55);
 }
 .poster svg{display:block;width:100%;height:auto}
 .poster-caption{
@@ -114,9 +111,9 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 /* TICKER */
 .ticker{
   background:var(--red);color:var(--cream);border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);
-  overflow:hidden;white-space:nowrap;position:relative;z-index:1;
+  overflow:hidden;white-space:nowrap;position:relative;z-index:1;contain:content;
 }
-.ticker-track{display:inline-block;padding:14px 0;animation:ticker 40s linear infinite;font-family:var(--display);font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+.ticker-track{display:inline-block;padding:14px 0;animation:ticker 40s linear infinite;will-change:transform;font-family:var(--display);font-size:20px;letter-spacing:.14em;text-transform:uppercase}
 .ticker-track span{margin:0 28px}
 .ticker-track i{font-style:normal;color:var(--gold)}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -146,6 +143,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 /* COMMITTEE */
 .committee{position:relative}
 .committee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card .art{content-visibility:auto;contain-intrinsic-size:auto 400px}
 .card{
   --skin:#eddcbf;--ink:#100e0d;--cloth:#3a2e28;
   position:relative;background:var(--paper);color:var(--ink);border-radius:6px;
@@ -173,7 +171,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 /* HOW */
 .how{background:var(--ink-2)}
 .how .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.phone{max-width:380px;margin:0 auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.6))}
+.phone{max-width:380px;margin:0 auto;border-radius:46px;box-shadow:0 30px 50px rgba(0,0,0,.6)}
 .phone svg{width:100%;height:auto;display:block}
 .steps{list-style:none;padding:0;margin:0;counter-reset:s}
 .steps li{position:relative;padding:0 0 30px 84px;counter-increment:s}
