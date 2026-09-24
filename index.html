@@ -70,22 +70,6 @@
   </g>
 
 
-  <!-- bust base (colors via --skin / --cloth / --ink) -->
-  <g id="bust">
-    <rect x="133" y="214" width="54" height="64" fill="var(--skin)"/>
-    <path d="M133 214h54v24c-14 12-40 12-54 0z" fill="var(--ink)" opacity=".16"/>
-    <path d="M10 400V338c0-42 60-60 118-72l32-10 32 10c58 12 118 30 118 72v62z" fill="var(--cloth)"/>
-    <ellipse cx="160" cy="168" rx="66" ry="80" fill="var(--skin)"/>
-    <ellipse cx="94" cy="178" rx="10" ry="15" fill="var(--skin)"/>
-    <ellipse cx="226" cy="178" rx="10" ry="15" fill="var(--skin)"/>
-  </g>
-  <g id="face">
-    <ellipse cx="136" cy="170" rx="6.5" ry="7.5" fill="var(--ink)"/>
-    <ellipse cx="184" cy="170" rx="6.5" ry="7.5" fill="var(--ink)"/>
-    <circle cx="138" cy="167" r="1.8" fill="#fff" opacity=".8"/>
-    <circle cx="186" cy="167" r="1.8" fill="#fff" opacity=".8"/>
-    <path d="M160 168l-9 32h18" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-  </g>
 </defs>
 </svg>
 
@@ -147,30 +131,15 @@
     <use href="#star" transform="translate(60 470) scale(1)" fill="#e0a83a" opacity=".6"/>
     <use href="#star" transform="translate(840 470) scale(1)" fill="#e0a83a" opacity=".6"/>
 
-    <!-- speaker -->
-    <g style="--skin:#eddcbf;--cloth:#4a5a3f;--ink:#100e0d" transform="translate(178 150) scale(1.7)">
-      <use href="#bust"/><use href="#face"/>
-      <path d="M98 142c-4-56 24-84 62-84s66 28 62 84c-8-30-30-44-62-44s-54 14-62 44z" fill="var(--ink)"/>
-      <path d="M104 122c6-40 30-62 56-62s50 22 56 62c-12-22-32-32-56-32s-44 10-56 32z" fill="var(--ink)"/>
-      <path d="M96 150c-2 12-2 26 0 40 6-10 10-24 8-40zM224 150c2 12 2 26 0 40-6-10-10-24-8-40z" fill="var(--ink)"/>
-      <path d="M118 150c10-7 26-7 34-2M168 148c8-5 24-5 34 2" fill="none" stroke="var(--ink)" stroke-width="7" stroke-linecap="round"/>
-      <path d="M112 204c14-14 34-12 48 0 14-12 34-14 48 0-6 22-26 32-48 26-22 6-42-4-48-26z" fill="var(--ink)"/>
-      <path d="M176 226l32 18" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
-      <path d="M204 238h18v16c0 8-18 8-18 0z" fill="var(--ink)"/>
-      <path d="M216 232c2-8 8-10 6-18" fill="none" stroke="var(--ink)" stroke-width="2.5" opacity=".6" stroke-linecap="round"/>
-      <rect x="40" y="298" width="46" height="18" rx="2" fill="#c1121f"/>
-      <rect x="234" y="298" width="46" height="18" rx="2" fill="#c1121f"/>
-      <use href="#star" transform="translate(63 307) scale(.55)" fill="#e0a83a"/>
-      <use href="#star" transform="translate(257 307) scale(.55)" fill="#e0a83a"/>
-      <path d="M128 262l32 30 32-30" fill="none" stroke="var(--ink)" stroke-width="3" opacity=".5"/>
-    
-    </g>
-    <!-- raised arm -->
-    <path d="M655 700c100-50 150-190 165-330" fill="none" stroke="#4a5a3f" stroke-width="72" stroke-linecap="round"/>
+    <!-- speaker: the Spolem portrait from assets/portraits -->
+    <image href="assets/portraits/spolem.svg" x="178" y="144" width="544" height="680"/>
+    <!-- raised arm, in the portrait's tunic colours -->
+    <path d="M655 700c100-50 150-190 165-330" fill="none" stroke="#d8cdb0" stroke-width="72" stroke-linecap="round"/>
+    <path d="M636 690c90-50 136-180 150-316" fill="none" stroke="#a89c7e" stroke-width="22" stroke-linecap="round" opacity=".7"/>
     <path d="M812 400l6-30" stroke="#100e0d" stroke-width="76" stroke-linecap="round" opacity=".18"/>
-    <circle cx="824" cy="338" r="42" fill="#eddcbf"/>
-    <path d="M794 330c12-20 54-20 62 2" fill="none" stroke="#100e0d" stroke-width="3.5" opacity=".35"/>
-    <path d="M804 354h40" stroke="#100e0d" stroke-width="3.5" opacity=".25"/>
+    <circle cx="824" cy="338" r="42" fill="#efd5b2" stroke="#a8795a" stroke-width="2"/>
+    <path d="M794 330c12-20 54-20 62 2" fill="none" stroke="#a8795a" stroke-width="3.5" opacity=".6"/>
+    <path d="M804 354h40" stroke="#a8795a" stroke-width="3.5" opacity=".5"/>
 
     <!-- sound arcs -->
     <g fill="none" stroke="#e0a83a" stroke-linecap="round" stroke-width="7">
