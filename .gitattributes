@@ -1,0 +1,7 @@
+# Git decides line endings, not whatever tool happened to write the file. Without this the
+# repository collects both kinds and any tool that rewrites a whole file produces a diff in which
+# every line changed.
+* text=auto eol=lf
+
+# Windows will not run a batch file with Unix endings.
+*.bat text eol=crlf
