@@ -3,8 +3,9 @@
 //
 // Two masters share one scene (the leader behind a burning microphone, a crowd in front,
 // everything else misty steel blue), drawn at two levels of detail:
-//   icon_small.svg - 108x108 adaptive-icon grid, heavy mic outline, for launcher and favicon sizes
+//   icon_small.svg - 108x108 adaptive-icon grid, heavy mic outline, for launcher sizes
 //   icon_large.svg - 512x512, full detail, for the Play Store and other large uses
+//   favicon.svg    - the small master zoomed to the cap, on a transparent background, for browser tabs
 const fs = require('fs');
 const path = require('path');
 
@@ -64,7 +65,10 @@ function commonDefs(C, p, { lightX, lightY, lightR, blur, edge, topEdge, grain }
 // ---------------------------------------------------------------- small master (108 grid)
 
 // flat: plain colour fills only, without clouds, haze, glow, fog and grain
-function small(C = MIDNIGHT, GLOW = LOW_GLOW, { flat = false } = {}) {
+// transparent: no sky, clouds, haze, fog or grain, only the figures, microphone and crowd
+// view: the square that is drawn, [x, y, size] in the 108 grid
+function small(C = MIDNIGHT, GLOW = LOW_GLOW, { flat = false, transparent = false, view = [0, 0, 108] } = {}) {
+  const scene = s => transparent ? '' : s;
   const mood = s => flat ? '' : s;
   const p = 's';
   const jitter = [0, .8, -.6, .4, -.9, .6, -.3, .9, -.5, .2, -.8, .5, -.2, .7, -.7, .3, -.4, .6, -.1, .8, -.6];
@@ -108,14 +112,14 @@ function small(C = MIDNIGHT, GLOW = LOW_GLOW, { flat = false } = {}) {
  <path d="M50.5 49.5h7M50.5 53h7M50.5 56.5h7" stroke="${flat ? C.dark : C.fire3}" stroke-width=".9" stroke-linecap="round" opacity=".55"/>
 </g>`;
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="Master Dictator app icon: a burning microphone in front of a leader and a crowd">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${view.join(' ')} ${view[2]}" width="${view[2]}" height="${view[2]}" role="img" aria-label="Master Dictator app icon: a burning microphone in front of a leader and a crowd">
 <defs>${commonDefs(C, p, { lightX: 54, lightY: 54, lightR: 34, blur: 2.6, edge: .75, topEdge: .9, grain: 1.4 })}
 <filter id="${p}soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation=".35"/></filter>
 <filter id="${p}cloud" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
 </defs>
-<rect width="108" height="108" fill="url(#${p}sky)"/>
-${mood(`<g filter="url(#${p}cloud)" fill="${C.haze}"><ellipse cx="26" cy="24" rx="20" ry="8" opacity=".35"/><ellipse cx="86" cy="30" rx="18" ry="7" opacity=".3"/><ellipse cx="60" cy="14" rx="24" ry="6" opacity=".25"/></g>`)}
-${mood(`<circle cx="54" cy="40" r="36" fill="url(#${p}haze)"/>`)}
+${scene(`<rect width="108" height="108" fill="url(#${p}sky)"/>`)}
+${scene(mood(`<g filter="url(#${p}cloud)" fill="${C.haze}"><ellipse cx="26" cy="24" rx="20" ry="8" opacity=".35"/><ellipse cx="86" cy="30" rx="18" ry="7" opacity=".3"/><ellipse cx="60" cy="14" rx="24" ry="6" opacity=".25"/></g>`))}
+${scene(mood(`<circle cx="54" cy="40" r="36" fill="url(#${p}haze)"/>`))}
 <g${flat ? '' : ` filter="url(#${p}soft)"`} fill="${C.leader}" opacity="${flat ? 1 : '.78'}">${paths(leader)}<path d="M44 33.5c3.5 2.6 16.5 2.6 20 0" stroke="${C.leader}" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
 <g transform="translate(54 26)" fill="${C.emblem}">${EMBLEM}</g>
 ${mood(`<circle cx="54" cy="55" r="30" fill="url(#${p}halo)" opacity="${GLOW}"/>`)}
@@ -123,9 +127,9 @@ ${mood(`<circle cx="54" cy="55" r="30" fill="url(#${p}halo)" opacity="${GLOW}"/>
 ${mic}
 ${sparks}
 ${crowd.map(c => `<g fill="${c.back ? C.crowdBack : C.crowdFront}">${paths(c.list)}</g>`).join('')}
-${mood(`<rect y="70" width="108" height="20" fill="url(#${p}fog)"/>`)}
+${scene(mood(`<rect y="70" width="108" height="20" fill="url(#${p}fog)"/>`))}
 <g mask="url(#${p}lightfall)"><g filter="url(#${p}topedge)">${crowd.map(c => paths(c.list)).join('')}</g></g>
-${mood(`<rect width="108" height="108" filter="url(#${p}grain)" opacity=".12"/>`)}
+${scene(mood(`<rect width="108" height="108" filter="url(#${p}grain)" opacity=".12"/>`))}
 </svg>
 `;
 }
@@ -274,7 +278,8 @@ if (require.main === module) {
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'icon_small.svg'), small());
   fs.writeFileSync(path.join(OUT, 'icon_large.svg'), large());
-  console.log(`Wrote icon_small.svg and icon_large.svg to ${OUT}`);
+  fs.writeFileSync(path.join(OUT, 'favicon.svg'), small(MIDNIGHT, LOW_GLOW, { transparent: true, view: [21, 18.5, 66] }));
+  console.log(`Wrote icon_small.svg, icon_large.svg and favicon.svg to ${OUT}`);
 }
 
 module.exports = { small, large, MIDNIGHT };
