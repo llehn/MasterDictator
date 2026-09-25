@@ -14,7 +14,7 @@ The same scene comes in two levels of detail. Small sizes need a shape you can r
 
 In `icon_small.svg`, launchers only show the centre 72×72 and cut it to their own shape (circle, squircle, rounded square). Keep anything important inside the centre circle of diameter 66.
 
-Both files use SVG filters (blur, grain, rim light). Android's VectorDrawable cannot express these, so the Android and Play Store assets have to be exported as PNGs.
+All three files use SVG filters (blur, rim light, and grain in the icons). Android's VectorDrawable cannot express these, so the Android and Play Store assets have to be exported as PNGs.
 
 ## Changing the artwork
 
