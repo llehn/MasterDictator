@@ -7,6 +7,8 @@ const { execFileSync } = require('child_process');
 
 
 const INK = '#1a1412', RED = '#c1121f', RED2 = '#8f0d16', RED3 = '#5c070d', GOLD = '#e0a83a', GOLD2 = '#b8862a', CREAM = '#f3e9d6';
+// poster background and microphone: the Midnight palette of the app icon (steel blue, fire)
+const STEEL = '#48636f', STEEL2 = '#1b2d36', STEEL3 = '#05090c', FIRE = '#ff5e1a', FIRE_Y = '#ffbf3a', FIRE_D = '#a8200f';
 const STAR = 'M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z';
 
 const SKIN = {
@@ -26,20 +28,20 @@ function background(p) {
     rays += `M${cx} ${cy}L${(cx + R * Math.cos(a1)).toFixed(1)} ${(cy + R * Math.sin(a1)).toFixed(1)}L${(cx + R * Math.cos(a2)).toFixed(1)} ${(cy + R * Math.sin(a2)).toFixed(1)}Z`;
   }
   return `<rect width="400" height="500" fill="url(#${p}bg)"/>
-<path d="${rays}" fill="${RED3}" opacity=".32"/>
+<path d="${rays}" fill="${STEEL3}" opacity=".32"/>
 <rect width="400" height="500" fill="url(#${p}ht)" opacity=".9"/>
-<circle cx="200" cy="215" r="178" fill="${GOLD}" opacity=".10"/>
-<circle cx="200" cy="215" r="132" fill="${GOLD}" opacity=".10"/>
-${star(44, 50, 1.1)}${star(358, 70, .7)}${star(30, 150, .55, GOLD, .7)}${star(376, 170, .5, GOLD, .7)}`;
+<circle cx="200" cy="215" r="178" fill="${FIRE}" opacity=".10"/>
+<circle cx="200" cy="215" r="132" fill="${FIRE}" opacity=".10"/>
+${star(44, 50, 1.1, FIRE_Y)}${star(358, 70, .7, FIRE_Y)}${star(30, 150, .55, FIRE_Y, .7)}${star(376, 170, .5, FIRE_Y, .7)}`;
 }
 
 function defs(p, skin) {
   return `<defs>
-<radialGradient id="${p}bg" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="#dc1824"/><stop offset=".6" stop-color="${RED}"/><stop offset="1" stop-color="${RED2}"/></radialGradient>
+<radialGradient id="${p}bg" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="${STEEL}"/><stop offset=".6" stop-color="${STEEL2}"/><stop offset="1" stop-color="${STEEL3}"/></radialGradient>
 <pattern id="${p}ht" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3" cy="3" r="1" fill="${INK}" opacity=".16"/></pattern>
 <pattern id="${p}hs" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.25" cy="2.25" r=".95" fill="${skin.d}" opacity=".55"/></pattern>
 <pattern id="${p}hc" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.5" cy="2.5" r="1.1" fill="#000" opacity=".28"/></pattern>
-<linearGradient id="${p}grille" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a6420"/><stop offset=".35" stop-color="${GOLD}"/><stop offset=".55" stop-color="#f6d991"/><stop offset="1" stop-color="#9a7026"/></linearGradient>
+<linearGradient id="${p}grille" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${FIRE_D}"/><stop offset=".35" stop-color="${FIRE}"/><stop offset=".55" stop-color="${FIRE_Y}"/><stop offset="1" stop-color="${FIRE_D}"/></linearGradient>
 <linearGradient id="${p}shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></linearGradient>
 </defs>`;
 }
@@ -146,9 +148,9 @@ function mic(p) {
  <path d="${bars}" stroke="${INK}" stroke-width="2.2" opacity=".55"/>
  <rect x="-3" y="-42" width="6" height="84" fill="${INK}"/>
  <path d="M-15 -30C-18 -14 -18 14 -15 30" stroke="#fff6dc" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
- <circle cx="-36" cy="6" r="5" fill="${GOLD2}"/><circle cx="36" cy="6" r="5" fill="${GOLD2}"/>
+ <circle cx="-36" cy="6" r="5" fill="${FIRE}"/><circle cx="36" cy="6" r="5" fill="${FIRE}"/>
 </g>
-<g fill="none" stroke="${GOLD}" stroke-width="5" stroke-linecap="round" transform="translate(346 336) rotate(-40)">
+<g fill="none" stroke="${FIRE}" stroke-width="5" stroke-linecap="round" transform="translate(346 336) rotate(-40)">
  <path d="M0 0a20 20 0 0 1 0 40" opacity=".9"/><path d="M9-10a34 34 0 0 1 0 60" opacity=".6"/><path d="M18-20a48 48 0 0 1 0 80" opacity=".35"/>
 </g>`;
 }

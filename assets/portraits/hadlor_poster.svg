@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="Caricature of a stern chancellor with a toothbrush mustache"><defs>
-<radialGradient id="hybg" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="#dc1824"/><stop offset=".6" stop-color="#c1121f"/><stop offset="1" stop-color="#8f0d16"/></radialGradient>
+<radialGradient id="hybg" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="#48636f"/><stop offset=".6" stop-color="#1b2d36"/><stop offset="1" stop-color="#05090c"/></radialGradient>
 <pattern id="hyht" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3" cy="3" r="1" fill="#1a1412" opacity=".16"/></pattern>
 <pattern id="hyhs" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.25" cy="2.25" r=".95" fill="#a8795a" opacity=".55"/></pattern>
 <pattern id="hyhc" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.5" cy="2.5" r="1.1" fill="#000" opacity=".28"/></pattern>
-<linearGradient id="hygrille" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a6420"/><stop offset=".35" stop-color="#e0a83a"/><stop offset=".55" stop-color="#f6d991"/><stop offset="1" stop-color="#9a7026"/></linearGradient>
+<linearGradient id="hygrille" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a8200f"/><stop offset=".35" stop-color="#ff5e1a"/><stop offset=".55" stop-color="#ffbf3a"/><stop offset="1" stop-color="#a8200f"/></linearGradient>
 <linearGradient id="hyshade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></linearGradient>
 </defs><rect width="400" height="500" fill="url(#hybg)"/>
-<path d="M200 215L900.0 215.0L882.4 370.8ZM200 215L830.7 518.7L747.3 651.4ZM200 215L636.4 762.3L503.7 845.7ZM200 215L355.8 897.4L200.0 915.0ZM200 215L44.2 897.4L-103.7 845.7ZM200 215L-236.4 762.3L-347.3 651.4ZM200 215L-430.7 518.7L-482.4 370.8ZM200 215L-500.0 215.0L-482.4 59.2ZM200 215L-430.7 -88.7L-347.3 -221.4ZM200 215L-236.4 -332.3L-103.7 -415.7ZM200 215L44.2 -467.4L200.0 -485.0ZM200 215L355.8 -467.4L503.7 -415.7ZM200 215L636.4 -332.3L747.3 -221.4ZM200 215L830.7 -88.7L882.4 59.2Z" fill="#5c070d" opacity=".32"/>
+<path d="M200 215L900.0 215.0L882.4 370.8ZM200 215L830.7 518.7L747.3 651.4ZM200 215L636.4 762.3L503.7 845.7ZM200 215L355.8 897.4L200.0 915.0ZM200 215L44.2 897.4L-103.7 845.7ZM200 215L-236.4 762.3L-347.3 651.4ZM200 215L-430.7 518.7L-482.4 370.8ZM200 215L-500.0 215.0L-482.4 59.2ZM200 215L-430.7 -88.7L-347.3 -221.4ZM200 215L-236.4 -332.3L-103.7 -415.7ZM200 215L44.2 -467.4L200.0 -485.0ZM200 215L355.8 -467.4L503.7 -415.7ZM200 215L636.4 -332.3L747.3 -221.4ZM200 215L830.7 -88.7L882.4 59.2Z" fill="#05090c" opacity=".32"/>
 <rect width="400" height="500" fill="url(#hyht)" opacity=".9"/>
-<circle cx="200" cy="215" r="178" fill="#e0a83a" opacity=".10"/>
-<circle cx="200" cy="215" r="132" fill="#e0a83a" opacity=".10"/>
-<path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(44 50) scale(1.1)" fill="#e0a83a" opacity="1"/><path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(358 70) scale(0.7)" fill="#e0a83a" opacity="1"/><path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(30 150) scale(0.55)" fill="#e0a83a" opacity="0.7"/><path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(376 170) scale(0.5)" fill="#e0a83a" opacity="0.7"/><clipPath id="hysh"><path d="M-10 510V440C-10 400 30 376 90 364C124 357 148 348 162 338H238C252 348 276 357 310 364C370 376 410 400 410 440V510Z"/></clipPath>
+<circle cx="200" cy="215" r="178" fill="#ff5e1a" opacity=".10"/>
+<circle cx="200" cy="215" r="132" fill="#ff5e1a" opacity=".10"/>
+<path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(44 50) scale(1.1)" fill="#ffbf3a" opacity="1"/><path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(358 70) scale(0.7)" fill="#ffbf3a" opacity="1"/><path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(30 150) scale(0.55)" fill="#ffbf3a" opacity="0.7"/><path d="M0-12l3.5 8.3 9 .5-7.2 5.5 2.7 8.7L0 6l-8 5 2.7-8.7-7.2-5.5 9-.5z" transform="translate(376 170) scale(0.5)" fill="#ffbf3a" opacity="0.7"/><clipPath id="hysh"><path d="M-10 510V440C-10 400 30 376 90 364C124 357 148 348 162 338H238C252 348 276 357 310 364C370 376 410 400 410 440V510Z"/></clipPath>
 <path d="M-10 510V440C-10 400 30 376 90 364C124 357 148 348 162 338H238C252 348 276 357 310 364C370 376 410 400 410 440V510Z" fill="#7d6a4a"/>
 <g clip-path="url(#hysh)">
  <path d="M-20 330H150C126 380 112 440 118 520H-20Z" fill="#554631"/>
@@ -88,8 +88,8 @@
  <path d="M-20 -32.0H20M-20 -25.5H20M-20 -19.0H20M-20 -12.5H20M-20 -6.0H20M-20 0.5H20M-20 7.0H20M-20 13.5H20M-20 20.0H20M-20 26.5H20" stroke="#1a1412" stroke-width="2.2" opacity=".55"/>
  <rect x="-3" y="-42" width="6" height="84" fill="#1a1412"/>
  <path d="M-15 -30C-18 -14 -18 14 -15 30" stroke="#fff6dc" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
- <circle cx="-36" cy="6" r="5" fill="#b8862a"/><circle cx="36" cy="6" r="5" fill="#b8862a"/>
+ <circle cx="-36" cy="6" r="5" fill="#ff5e1a"/><circle cx="36" cy="6" r="5" fill="#ff5e1a"/>
 </g>
-<g fill="none" stroke="#e0a83a" stroke-width="5" stroke-linecap="round" transform="translate(346 336) rotate(-40)">
+<g fill="none" stroke="#ff5e1a" stroke-width="5" stroke-linecap="round" transform="translate(346 336) rotate(-40)">
  <path d="M0 0a20 20 0 0 1 0 40" opacity=".9"/><path d="M9-10a34 34 0 0 1 0 60" opacity=".6"/><path d="M18-20a48 48 0 0 1 0 80" opacity=".35"/>
 </g></svg>
