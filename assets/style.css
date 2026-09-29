@@ -53,7 +53,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 }
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--cream);font-family:var(--display);font-size:20px;letter-spacing:.08em;text-transform:uppercase}
-.brand svg{width:40px;height:40px;flex:none}
+.brand img{width:40px;height:40px;flex:none;border-radius:9px}
 .brand span b{color:var(--red);font-weight:400}
 .nav-links{display:flex;gap:30px;align-items:center;list-style:none;margin:0;padding:0}
 .nav-links a{color:var(--muted);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
@@ -61,7 +61,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 .nav-links .pill{
   color:var(--ink);background:var(--gold);padding:9px 16px;border-radius:999px;font-weight:800;
 }
-.nav-links .pill:hover{background:var(--cream)}
+.nav-links .pill:hover{background:var(--cream);color:var(--ink)}
 .nav-toggle{display:none}
 
 /* HERO */
@@ -92,8 +92,6 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-he
 .btn-play span{display:block;line-height:1.1}
 .btn-ghost{border-color:rgba(223,231,234,.25);color:var(--cream)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
-.hero-note{margin:26px 0 0;font-size:14px;color:var(--muted)}
-.hero-note b{color:var(--gold);font-weight:700}
 
 .poster{position:relative;transform:rotate(-1.5deg)}
 .poster-frame{
