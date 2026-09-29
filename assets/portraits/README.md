@@ -1,6 +1,6 @@
 # Central Committee portraits
 
-Nine caricature portraits for the Master Dictator app and website. Each one has an invented name that echoes a historical dictator. Never show the real name (`basedOn`) to users. It is in the manifest only so developers know who each one is.
+Nine portraits for the Master Dictator app and website, each with an invented name.
 
 ## Files
 

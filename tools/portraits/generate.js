@@ -160,7 +160,7 @@ const parts = (p, s, label, inner) => ({ p, s, label: label.replace(' speaking i
 // ---------------- characters ----------------
 const chars = [];
 
-// 1 STALIN
+// 1 SPOLEM
 {
   const p = 'st', s = SKIN.fair, HAIR = '#2c2724';
   const face = 'M200 124C254 124 286 160 286 212C286 258 272 292 250 312C234 326 216 334 200 334C184 334 166 326 150 312C128 292 114 258 114 212C114 160 146 124 200 124Z';
@@ -185,10 +185,10 @@ ${nose(s, 262, 1.15)}${nasolabial(s, 262)}${pocks}
 <path d="M200 270C184 262 162 264 148 278C140 290 142 302 150 304C158 296 172 292 186 294C194 295 198 292 200 288C202 292 206 295 214 294C228 292 242 296 250 304C258 302 260 290 252 278C238 264 216 262 200 270Z" fill="${HAIR}"/>
 <path d="M156 290C168 280 184 276 196 278M244 290C232 280 216 276 204 278M162 298C172 290 184 288 192 290" stroke="#6d655e" stroke-width="1.8" fill="none" opacity=".8" stroke-linecap="round"/>
 <ellipse cx="200" cy="322" rx="16" ry="5" fill="${s.h}" opacity=".6"/>`;
-  chars.push({ name: 'Spolem', basedOn: 'Stalin', title: 'General Secretary of Offline Affairs', quote: 'Trust is good. Airplane mode is better.', art: parts(p, s, 'Caricature of a mustachioed marshal speaking into a microphone', inner) });
+  chars.push({ name: 'Spolem', title: 'General Secretary of Offline Affairs', quote: 'Trust is good. Airplane mode is better.', art: parts(p, s, 'Portrait of a mustachioed marshal speaking into a microphone', inner) });
 }
 
-// 2 LENIN
+// 2 LANOM
 {
   const p = 'ln', s = SKIN.fair, HAIR = '#7a4a2c', HD = '#56321c';
   const face = 'M200 98C258 98 288 142 288 204C288 254 274 290 252 310C236 324 218 332 200 332C182 332 164 324 148 310C126 290 112 254 112 204C112 142 142 98 200 98Z';
@@ -211,10 +211,10 @@ ${nose(s, 260, 1.05)}
 <path d="M188 312C190 328 194 340 200 352M212 312C210 328 206 340 200 352M178 306C182 318 186 328 190 336M222 306C218 318 214 328 210 336" stroke="${HD}" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 <path d="M200 276C186 268 168 270 156 282C164 288 178 288 188 286C194 285 198 283 200 281C202 283 206 285 212 286C222 288 236 288 244 282C232 270 214 268 200 276Z" fill="${HAIR}"/>
 <path d="M164 282C174 278 186 276 196 278M236 282C226 278 214 276 204 278" stroke="${HD}" stroke-width="1.6" fill="none"/>`;
-  chars.push({ name: 'Lanom', basedOn: 'Lenin', title: 'Chairman of the Council of Local Processing', quote: 'What is to be done? Dictate.', art: parts(p, s, 'Caricature of a bald revolutionary with a goatee speaking into a microphone', inner) });
+  chars.push({ name: 'Lanom', title: 'Chairman of the Council of Local Processing', quote: 'What is to be done? Dictate.', art: parts(p, s, 'Portrait of a bald revolutionary with a goatee speaking into a microphone', inner) });
 }
 
-// 3 MAO
+// 3 MOE
 {
   const p = 'mo', s = SKIN.fair, HAIR = '#1c1715';
   const face = 'M200 118C254 118 288 154 288 210C288 264 276 298 254 318C236 334 218 340 200 340C182 340 164 334 146 318C124 298 112 264 112 210C112 154 146 118 200 118Z';
@@ -235,10 +235,10 @@ ${nose(s, 266, 1.25)}${nasolabial(s, 268, .45)}
 <path d="M184 302C192 312 208 312 216 302C208 305 192 305 184 302Z" fill="${s.lip}" opacity=".7"/>
 <path d="M174 296l4 3M226 296l-4 3" stroke="${s.d}" stroke-width="2" stroke-linecap="round"/>
 <circle cx="214" cy="320" r="4.6" fill="#3a2a22"/><circle cx="213" cy="318.5" r="1.2" fill="#fff" opacity=".35"/>`;
-  chars.push({ name: 'Moe', basedOn: 'Mao', title: 'Chairman of the Hundred Languages', quote: 'Let a hundred languages bloom. Let none be uploaded.', art: parts(p, s, 'Caricature of a round-faced chairman in a grey tunic speaking into a microphone', inner) });
+  chars.push({ name: 'Moe', title: 'Chairman of the Hundred Languages', quote: 'Let a hundred languages bloom. Let none be uploaded.', art: parts(p, s, 'Portrait of a round-faced chairman in a grey tunic speaking into a microphone', inner) });
 }
 
-// 4 HITLER
+// 4 HADLOR
 {
   const p = 'hy', s = SKIN.fair, HAIR = '#1f1916';
   const face = 'M200 118C250 118 280 156 280 210C280 258 268 292 248 314C232 330 216 338 200 338C184 338 168 330 152 314C132 292 120 258 120 210C120 156 150 118 200 118Z';
@@ -258,10 +258,10 @@ ${nose(s, 264, 1.08)}${nasolabial(s, 268, .55)}
 <path d="M188 274H212C214 282 214 288 211 292H189C186 288 186 282 188 274Z" fill="${HAIR}"/>
 <path d="M180 305C192 301 208 301 220 305" stroke="${INK}" stroke-width="2.4" fill="none" stroke-linecap="round"/>
 <path d="M186 308C194 313 206 313 214 308" stroke="${s.lip}" stroke-width="3" fill="none" stroke-linecap="round"/>`;
-  chars.push({ name: 'Hadlor', basedOn: 'Hitler', title: 'Chancellor of the Loud Voice', quote: 'Had a lot to say. None of it needed a cloud.', art: parts(p, s, 'Caricature of a stern chancellor with a toothbrush mustache speaking into a microphone', inner) });
+  chars.push({ name: 'Hadlor', title: 'Chancellor of the Loud Voice', quote: 'Had a lot to say. None of it needed a cloud.', art: parts(p, s, 'Portrait of a stern chancellor with a toothbrush mustache speaking into a microphone', inner) });
 }
 
-// 5 KIM
+// 5 JIM CHONG-AM
 {
   const p = 'km', s = SKIN.fair, HAIR = '#151111';
   const face = 'M200 124C258 124 294 160 294 216C294 270 282 306 258 326C240 342 220 348 200 348C180 348 160 342 142 326C118 306 106 270 106 216C106 160 142 124 200 124Z';
@@ -282,10 +282,10 @@ ${nose(s, 272, 1.18, 232)}
 <path d="M186 306C194 312 206 312 214 306C206 308 194 308 186 306Z" fill="${s.lip}" opacity=".7"/>
 <path d="M176 298l4 4M224 298l-4 4" stroke="${s.d}" stroke-width="2" stroke-linecap="round"/>
 <path d="M156 334C176 348 224 348 244 334" stroke="${s.d}" stroke-width="2.2" fill="none" opacity=".6"/>`;
-  chars.push({ name: 'Jim Chong-am', basedOn: 'Kim Jong-un', title: 'Supreme Leader of Airplane Mode', quote: 'My phone has no internet either.', art: parts(p, s, 'Caricature of a chubby supreme leader with a flat-top haircut speaking into a microphone', inner) });
+  chars.push({ name: 'Jim Chong-am', title: 'Supreme Leader of Airplane Mode', quote: 'My phone has no internet either.', art: parts(p, s, 'Portrait of a chubby supreme leader with a flat-top haircut speaking into a microphone', inner) });
 }
 
-// 6 MUSSOLINI
+// 6 MOZZARELLINI
 {
   const p = 'mz', s = SKIN.warm;
   const face = 'M200 104C252 104 282 142 284 196C286 240 290 276 278 306C266 334 236 350 200 352C164 350 134 334 122 306C110 276 114 240 116 196C118 142 148 104 200 104Z';
@@ -305,10 +305,10 @@ ${nose(s, 268, 1.2, 226)}${nasolabial(s, 270, .6)}
 <path d="M174 302l-5 7M226 302l5 7" stroke="${s.d}" stroke-width="2.2" stroke-linecap="round"/>
 <ellipse cx="208" cy="336" rx="24" ry="10" fill="${s.h}" opacity=".8"/><path d="M200 326v12" stroke="${s.d}" stroke-width="2" opacity=".6"/>
 <path d="M128 300C140 320 160 336 180 344M272 300C262 320 244 336 222 344" stroke="#7a6252" stroke-width="8" fill="none" opacity=".18" stroke-linecap="round"/>`;
-  chars.push({ name: 'Mozzarellini', basedOn: 'Mussolini', title: 'Il Duce of Punctuality', quote: 'Makes the transcription run on time.', art: parts(p, s, 'Caricature of a bald, jutting-jawed strongman speaking into a microphone', inner) });
+  chars.push({ name: 'Mozzarellini', title: 'Il Duce of Punctuality', quote: 'Makes the transcription run on time.', art: parts(p, s, 'Portrait of a bald, jutting-jawed strongman speaking into a microphone', inner) });
 }
 
-// 7 CASTRO
+// 7 GOSDRA
 {
   const p = 'cs', s = SKIN.warm, B = '#1d1714';
   const face = 'M200 122C252 122 282 160 282 214C282 262 270 296 250 316C234 332 216 340 200 340C184 340 166 332 150 316C130 296 118 262 118 214C118 160 148 122 200 122Z';
@@ -343,10 +343,10 @@ ${nose(s, 264, 1, 224)}
 <path d="M124 104C150 92 250 92 276 104C250 114 150 114 124 104Z" fill="${ch}"/>
 <path d="M114 182C150 170 250 170 286 182L290 198C250 186 150 186 110 198Z" fill="#262d1b"/><path d="M116 184C150 174 250 174 284 184" stroke="${ch}" stroke-width="1.5" fill="none" opacity=".6"/>
 <path d="M200 128L216 146L200 164L184 146Z" fill="${RED}"/><path d="M184 146L216 146L200 164Z" fill="${INK}"/>${star(200, 146, .45, '#f3ecdc')}`;
-  chars.push({ name: 'Gosdra', basedOn: 'Castro', title: 'Comandante of the Long Dictation', quote: 'Spoke for seven hours. Nothing was uploaded.', art: parts(p, s, 'Caricature of a bearded comandante with cap and cigar speaking into a microphone', inner) });
+  chars.push({ name: 'Gosdra', title: 'Comandante of the Long Dictation', quote: 'Spoke for seven hours. Nothing was uploaded.', art: parts(p, s, 'Portrait of a bearded comandante with cap and cigar speaking into a microphone', inner) });
 }
 
-// 8 NAPOLEON
+// 8 MABUREON
 {
   const p = 'np', s = SKIN.fair, HAIR = '#4a3222';
   const face = 'M200 126C250 126 280 162 280 214C280 260 268 292 248 312C232 326 216 334 200 334C184 334 168 326 152 312C132 292 120 260 120 214C120 162 150 126 200 126Z';
@@ -381,10 +381,10 @@ ${nose(s, 266, 1.08)}
 <path d="M36 160C52 104 124 68 200 66C276 68 348 104 364 160" stroke="${GOLD}" stroke-width="3" fill="none"/>
 <path d="M70 140C96 108 144 86 200 82" stroke="#4a4444" stroke-width="3" fill="none" opacity=".6" stroke-linecap="round"/>
 <path d="M150 72V120" stroke="${GOLD}" stroke-width="5"/><circle cx="150" cy="98" r="17" fill="#1f3a8a"/><circle cx="150" cy="98" r="11.5" fill="#f3ecdc"/><circle cx="150" cy="98" r="6" fill="${RED}"/>`;
-  chars.push({ name: 'Mabureon', basedOn: 'Napoleon', title: 'Emperor of the Compact Model', quote: 'Small model. Big conquests.', art: parts(p, s, 'Caricature of an emperor in a sideways bicorne hat speaking into a microphone', inner) });
+  chars.push({ name: 'Mabureon', title: 'Emperor of the Compact Model', quote: 'Small model. Big conquests.', art: parts(p, s, 'Portrait of an emperor in a sideways bicorne hat speaking into a microphone', inner) });
 }
 
-// 9 GADDAFI
+// 9 KITTAFU
 {
   const p = 'gf', s = SKIN.tan, HAIR = '#1c1512', HL = '#3d2c22';
   const face = 'M200 128C250 128 280 164 280 218C280 262 268 294 248 314C232 328 216 336 200 336C184 336 168 328 152 314C132 294 120 262 120 218C120 164 150 128 200 128Z';
@@ -430,7 +430,7 @@ ${nose(s, 270, 1.15, 236)}${nasolabial(s, 274, .7)}
 <path d="M178 304C188 297 196 299 200 300C204 299 212 297 222 304C212 308 188 308 178 304Z" fill="${s.lip}"/>
 <path d="M180 306C190 318 210 318 220 306C210 309 190 309 180 306Z" fill="#a4623f"/><path d="M178 305C190 307 210 307 222 305" stroke="${INK}" stroke-width="1.6" fill="none"/>
 <path d="M176 304l-4 6M224 304l4 6" stroke="${s.d}" stroke-width="2" stroke-linecap="round"/>`;
-  chars.push({ name: 'Kittafu', basedOn: 'Gaddafi', title: 'Brother Leader of On-Device Processing', quote: 'The masses shall dictate directly.', art: parts(p, s, 'Caricature of a colonel with curly hair, aviator sunglasses and many medals speaking into a microphone', inner) });
+  chars.push({ name: 'Kittafu', title: 'Brother Leader of On-Device Processing', quote: 'The masses shall dictate directly.', art: parts(p, s, 'Portrait of a colonel with curly hair, aviator sunglasses and many medals speaking into a microphone', inner) });
 }
 
 // ---------------- output ----------------
@@ -474,7 +474,7 @@ const manifest = chars.map(c => {
     png[w] = `png/${id}_${w}.png`;
     if (browser) renderPng(browser, path.join(OUT, `${id}.svg`), path.join(OUT, png[w]), w);
   }
-  return { id, name: c.name, basedOn: c.basedOn, title: c.title, quote: c.quote, description: c.art.label, svg: `${id}.svg`, posterSvg: `${id}_poster.svg`, png };
+  return { id, name: c.name, title: c.title, quote: c.quote, description: c.art.label, svg: `${id}.svg`, posterSvg: `${id}_poster.svg`, png };
 });
 fs.writeFileSync(path.join(OUT, 'portraits.json'), JSON.stringify({ aspectRatio: '4:5', viewBox: '0 0 400 500', portraits: manifest }, null, 2) + '\n');
 console.log(`Wrote ${manifest.length} portraits to ${OUT}`);

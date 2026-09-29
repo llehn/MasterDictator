@@ -5,9 +5,18 @@
 // everything else misty steel blue), drawn at two levels of detail:
 //   icon_small.svg - 108x108 adaptive-icon grid, heavy mic outline, for launcher sizes
 //   icon_large.svg - 512x512, full detail, for the Play Store and other large uses
+//   icon_launcher.svg - the small master cut to the centre 72x72 a launcher shows, for the website logo
 //   favicon.svg    - the small master zoomed to the cap, on a transparent background, for browser tabs
+//
+// It also renders the PNGs Android and Play need, because both masters use SVG filters that
+// Android's VectorDrawable cannot draw:
+//   png/icon_small_<px>.png - the launcher icon at every Android screen density (108 dp)
+//   png/icon_play_512.png   - the Play Store listing icon: the small master cut to the part a
+//                             launcher shows, so the store and the phone show the same icon
+// PNG rendering needs Microsoft Edge or Chrome; set BROWSER to its path if it is not found.
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const OUT = path.join(__dirname, '..', '..', 'assets', 'icon');
 
@@ -274,12 +283,49 @@ ${crowdRows.map((c, i) => `<g fill="${c.col}">${crowdRowShapes(c, c.col)}</g>${i
 `;
 }
 
+// ---------------------------------------------------------------- PNGs
+
+// The launcher icon's 108 dp at mdpi, hdpi, xhdpi, xxhdpi and xxxhdpi
+const SMALL_PNG_SIZES = [108, 162, 216, 324, 432];
+// The Play icon is the launcher's framing: the centre 72 of the 108 grid, which is what a launcher shows
+const PLAY_PNG_SIZE = 512;
+const LAUNCHER_VIEW = [18, 18, 72];
+
+function findBrowser() {
+  const candidates = [process.env.BROWSER,
+    'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
+    'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
+    'C:/Program Files/Google/Chrome/Application/chrome.exe',
+    '/usr/bin/google-chrome', '/usr/bin/chromium', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'];
+  return candidates.find(c => c && fs.existsSync(c));
+}
+
+function renderPng(browser, svgFile, pngFile, size) {
+  const page = path.join(OUT, `.render-${path.basename(pngFile)}.html`);
+  fs.writeFileSync(page, `<!doctype html><html><body style="margin:0;background:transparent"><img src="${path.basename(svgFile)}" width="${size}" height="${size}" style="display:block"></body></html>`);
+  execFileSync(browser, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1',
+    '--default-background-color=00000000', `--window-size=${size},${size}`, `--screenshot=${pngFile}`,
+    'file:///' + page.replace(/\\/g, '/')], { stdio: 'ignore' });
+  fs.unlinkSync(page);
+}
+
 if (require.main === module) {
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'icon_small.svg'), small());
   fs.writeFileSync(path.join(OUT, 'icon_large.svg'), large());
+  fs.writeFileSync(path.join(OUT, 'icon_launcher.svg'), small(MIDNIGHT, LOW_GLOW, { view: LAUNCHER_VIEW }));
   fs.writeFileSync(path.join(OUT, 'favicon.svg'), small(MIDNIGHT, LOW_GLOW, { transparent: true, view: [21, 18.5, 66] }));
-  console.log(`Wrote icon_small.svg, icon_large.svg and favicon.svg to ${OUT}`);
+  console.log(`Wrote icon_small.svg, icon_launcher.svg, icon_large.svg and favicon.svg to ${OUT}`);
+
+  const browser = findBrowser();
+  if (!browser) {
+    console.warn('No Edge/Chrome found: SVGs written, PNGs skipped. Set BROWSER.');
+  } else {
+    fs.mkdirSync(path.join(OUT, 'png'), { recursive: true });
+    for (const px of SMALL_PNG_SIZES) renderPng(browser, path.join(OUT, 'icon_small.svg'), path.join(OUT, 'png', `icon_small_${px}.png`), px);
+    renderPng(browser, path.join(OUT, 'icon_launcher.svg'), path.join(OUT, 'png', `icon_play_${PLAY_PNG_SIZE}.png`), PLAY_PNG_SIZE);
+    console.log(`Wrote ${SMALL_PNG_SIZES.length + 1} PNGs to ${path.join(OUT, 'png')}`);
+  }
 }
 
 module.exports = { small, large, MIDNIGHT };

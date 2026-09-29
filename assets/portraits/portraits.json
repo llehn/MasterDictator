@@ -5,10 +5,9 @@
     {
       "id": "spolem",
       "name": "Spolem",
-      "basedOn": "Stalin",
       "title": "General Secretary of Offline Affairs",
       "quote": "Trust is good. Airplane mode is better.",
-      "description": "Caricature of a mustachioed marshal",
+      "description": "Portrait of a mustachioed marshal",
       "svg": "spolem.svg",
       "posterSvg": "spolem_poster.svg",
       "png": {
@@ -19,10 +18,9 @@
     {
       "id": "lanom",
       "name": "Lanom",
-      "basedOn": "Lenin",
       "title": "Chairman of the Council of Local Processing",
       "quote": "What is to be done? Dictate.",
-      "description": "Caricature of a bald revolutionary with a goatee",
+      "description": "Portrait of a bald revolutionary with a goatee",
       "svg": "lanom.svg",
       "posterSvg": "lanom_poster.svg",
       "png": {
@@ -33,10 +31,9 @@
     {
       "id": "moe",
       "name": "Moe",
-      "basedOn": "Mao",
       "title": "Chairman of the Hundred Languages",
       "quote": "Let a hundred languages bloom. Let none be uploaded.",
-      "description": "Caricature of a round-faced chairman in a grey tunic",
+      "description": "Portrait of a round-faced chairman in a grey tunic",
       "svg": "moe.svg",
       "posterSvg": "moe_poster.svg",
       "png": {
@@ -47,10 +44,9 @@
     {
       "id": "hadlor",
       "name": "Hadlor",
-      "basedOn": "Hitler",
       "title": "Chancellor of the Loud Voice",
       "quote": "Had a lot to say. None of it needed a cloud.",
-      "description": "Caricature of a stern chancellor with a toothbrush mustache",
+      "description": "Portrait of a stern chancellor with a toothbrush mustache",
       "svg": "hadlor.svg",
       "posterSvg": "hadlor_poster.svg",
       "png": {
@@ -61,10 +57,9 @@
     {
       "id": "jim_chong_am",
       "name": "Jim Chong-am",
-      "basedOn": "Kim Jong-un",
       "title": "Supreme Leader of Airplane Mode",
       "quote": "My phone has no internet either.",
-      "description": "Caricature of a chubby supreme leader with a flat-top haircut",
+      "description": "Portrait of a chubby supreme leader with a flat-top haircut",
       "svg": "jim_chong_am.svg",
       "posterSvg": "jim_chong_am_poster.svg",
       "png": {
@@ -75,10 +70,9 @@
     {
       "id": "mozzarellini",
       "name": "Mozzarellini",
-      "basedOn": "Mussolini",
       "title": "Il Duce of Punctuality",
       "quote": "Makes the transcription run on time.",
-      "description": "Caricature of a bald, jutting-jawed strongman",
+      "description": "Portrait of a bald, jutting-jawed strongman",
       "svg": "mozzarellini.svg",
       "posterSvg": "mozzarellini_poster.svg",
       "png": {
@@ -89,10 +83,9 @@
     {
       "id": "gosdra",
       "name": "Gosdra",
-      "basedOn": "Castro",
       "title": "Comandante of the Long Dictation",
       "quote": "Spoke for seven hours. Nothing was uploaded.",
-      "description": "Caricature of a bearded comandante with cap and cigar",
+      "description": "Portrait of a bearded comandante with cap and cigar",
       "svg": "gosdra.svg",
       "posterSvg": "gosdra_poster.svg",
       "png": {
@@ -103,10 +96,9 @@
     {
       "id": "mabureon",
       "name": "Mabureon",
-      "basedOn": "Napoleon",
       "title": "Emperor of the Compact Model",
       "quote": "Small model. Big conquests.",
-      "description": "Caricature of an emperor in a sideways bicorne hat",
+      "description": "Portrait of an emperor in a sideways bicorne hat",
       "svg": "mabureon.svg",
       "posterSvg": "mabureon_poster.svg",
       "png": {
@@ -117,10 +109,9 @@
     {
       "id": "kittafu",
       "name": "Kittafu",
-      "basedOn": "Gaddafi",
       "title": "Brother Leader of On-Device Processing",
       "quote": "The masses shall dictate directly.",
-      "description": "Caricature of a colonel with curly hair, aviator sunglasses and many medals",
+      "description": "Portrait of a colonel with curly hair, aviator sunglasses and many medals",
       "svg": "kittafu.svg",
       "posterSvg": "kittafu_poster.svg",
       "png": {
